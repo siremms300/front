@@ -1,5 +1,5 @@
 
-require = require("esm")(module) 
+// require = require("esm")(module) 
 
-module.exports = require("./index.js") 
+// module.exports = require("./index.js") 
    

@@ -24,7 +24,13 @@ mongoose
   .catch((err) => console.log("DB CONNECTION ERR => ", err));
 
 // apply middlewares
-app.use(cors());
+app.use(cors(
+  {
+    origin: ['https://deploy-mern-lwhq.vercel.app'],
+    methods: ['POST', 'GET'],
+    credentials: true
+  }
+));
 app.use(express.json({ limit: "5mb" }));
 app.use(cookieParser());
 app.use(morgan("dev"));
